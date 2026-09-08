@@ -1,0 +1,31 @@
+services:
+  - type: web
+    name: thysmy-fundamental-v3
+    runtime: docker
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: APP_BASE_URL
+        sync: false
+      - key: SESSION_SECRET
+        generateValue: true
+      - key: DEMO_MODE
+        value: "false"
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_PUBLISHABLE_KEY
+        sync: false
+      - key: SUPABASE_SECRET_KEY
+        sync: false
+      - key: ADMIN_EMAIL
+        sync: false
+      - key: TOYYIBPAY_MODE
+        value: sandbox
+      - key: TOYYIBPAY_SECRET_KEY
+        sync: false
+      - key: TOYYIBPAY_CATEGORY_CODE
+        sync: false
+      - key: PRO_PRICE_RM
+        value: "29"
+      - key: PRO_DAYS
+        value: "30"
