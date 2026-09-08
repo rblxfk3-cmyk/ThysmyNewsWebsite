@@ -1,0 +1,16 @@
+{
+  "epoch": 1788880954,
+  "data": {
+    "ok": true,
+    "status": "LIVE",
+    "bid": 4397.883,
+    "ask": 4398.065,
+    "mid": 4397.974,
+    "spread": 0.182,
+    "dayDiffPercent": -0.57,
+    "marketState": "open",
+    "stale": false,
+    "timestamp": "2026-09-08T15:22:35Z",
+    "source": "MetaTrader 5 (Broker 1)"
+  }
+}

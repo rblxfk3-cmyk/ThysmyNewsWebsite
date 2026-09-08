@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: thysmy-fundamental-v2
+    runtime: docker
+    plan: free
+    healthCheckPath: /health
