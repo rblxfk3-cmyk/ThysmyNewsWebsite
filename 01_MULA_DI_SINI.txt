@@ -1,0 +1,55 @@
+THYSMY V4 — MULA DI SINI
+========================
+
+Ini pakej kod website lengkap: reka bentuk dark/gold, dashboard, kalendar,
+analisis, simulasi, rekod reaksi, jurnal, peringatan, kalkulator, pembantu,
+kad PNG, akaun Pro dan halaman pembayaran.
+
+1. EXTRACT ZIP
+   Extract THYSMY_V4_Full.zip dahulu. Fail app.py, Dockerfile, requirements.txt
+   dan folder static serta templates mesti berada pada paras folder yang sama.
+   Jangan upload ZIP sahaja sebagai pengganti kod website.
+
+2. SEDIAKAN SUPABASE SEBELUM DEPLOY
+   Dalam projek Supabase yang digunakan website sekarang, buka SQL Editor.
+   Salin seluruh kandungan SUPABASE_V4_MIGRATION.sql dan jalankan sekali.
+   Ini menambah jadual V4; akaun dan langganan sedia ada dikekalkan.
+   Jika projek Supabase masih kosong, jalankan SUPABASE_SETUP.sql dahulu.
+
+3. MASUKKAN KOD KE REPO / SERVER
+   Masukkan kandungan ZIP ke root ThysmyNewsWebsite, ganti fail yang sama nama.
+   Kekalkan struktur static/ dan templates/. Jangan letakkan semuanya dalam
+   satu subfolder tambahan jika Dockerfile lama berada di root repo.
+   Jika Render auto-deploy aktif, siapkan langkah 2 sebelum commit kod ini.
+
+4. SEMAK TETAPAN HOSTING
+   Kekalkan Supabase keys, ADMIN_EMAIL, ToyyibPay keys dan SESSION_SECRET
+   sedia ada dalam tetapan hosting. Tetapkan APP_BASE_URL kepada URL HTTPS
+   website sebenar, DEMO_MODE=false, LIVE_DATA_ENABLED=true,
+   ENABLE_RECORDER=true.
+
+   Untuk AI penuh, masukkan OPENAI_API_KEY dan OPENAI_MODEL yang boleh
+   digunakan oleh akaun API kau. Tanpa kedua-duanya, laman akan menunjukkan
+   panduan aturan dengan label AI belum aktif. Ada kos penggunaan API.
+
+   .env.example ialah contoh kosong, bukan keys sebenar. Jangan upload
+   fail .env yang mengandungi keys ke GitHub.
+
+5. DEPLOY DAN SEMAK
+   Deploy melalui Render/Docker yang sedia ada, kemudian buka website.
+   Log masuk admin dan semak /admin untuk status penyimpanan, recorder,
+   AI dan pembayaran. Checkout memerlukan Supabase V4 siap.
+   Sandbox ToyyibPay hanya untuk admin; pembayaran pelanggan sebenar
+   memerlukan mode production dan credentials merchant production.
+
+STATUS PAKEJ
+- 23 ujian fungsi deterministik telah lulus semasa penyediaan kod.
+- Kod ini belum dipush ke GitHub atau dipasang ke website live.
+- Sumber live, pengesahan email, transaksi SQL dan bayaran sebenar masih
+  perlu disemak pada deployment kau. Tiada bayaran dibuat dalam ujian.
+- Harga/berita bergantung pada sumber; data hilang tidak diganti angka contoh.
+- Rekod analisis bermula apabila recorder berjalan. Tiada ramalan lampau rekaan.
+- Peringatan memerlukan dashboard terbuka. Pelayan atau tab yang tidur boleh
+  menyebabkan news terlepas. US10Y ialah data harian, bukan quote live.
+
+Untuk butiran konfigurasi dan cara run di Windows/Linux, baca README.md.

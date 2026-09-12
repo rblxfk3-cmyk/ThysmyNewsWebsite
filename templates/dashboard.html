@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ms" data-theme="dark"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#101216">
+<meta name="description" content="Kalendar ekonomi, analisis fundamental XAUUSD, simulasi news dan jurnal trading dalam satu workspace.">
+<title>THYSMY — News Intelligence</title><link rel="icon" href="/static/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/static/workspace.css"><script defer src="/static/workspace.js"></script><script defer src="/static/features.js"></script></head>
+<body><a class="skip-link" href="#main">Terus ke kandungan</a>
+<aside class="sidebar" id="sidebar" aria-label="Navigasi utama">
+<a class="brand" href="/dashboard"><span class="brand-icon">T</span><span>THYSMY<small>NEWS INTELLIGENCE</small></span></a>
+<span class="nav-caption">WORKSPACE</span><nav id="navigation">
+<a href="#overview" data-page="overview" class="active"><span data-icon="grid"></span>Overview</a>
+<a href="#calendar" data-page="calendar"><span data-icon="calendar"></span>Kalendar ekonomi</a>
+<a href="#analysis" data-page="analysis"><span data-icon="pulse"></span>Analisis news</a>
+<a href="#news" data-page="news"><span data-icon="news"></span>Breaking news</a>
+<span class="nav-caption">RESEARCH & TOOLS</span>
+<a href="#simulator" data-page="simulator"><span data-icon="sliders"></span>Simulasi news<span class="nav-tag">LAB</span></a>
+<a href="#history" data-page="history"><span data-icon="history"></span>Rekod analisis</a>
+<a href="#calculator" data-page="calculator"><span data-icon="calculator"></span>Kalkulator trade</a>
+<a href="#journal" data-page="journal"><span data-icon="book"></span>Jurnal trading</a>
+<a href="#assistant" data-page="assistant"><span data-icon="spark"></span>Tanya THYSMY</a>
+<span class="nav-caption">PERSONAL</span>
+<a href="#alerts" data-page="alerts"><span data-icon="bell"></span>Peringatan news</a>
+<a href="#account" data-page="account"><span data-icon="user"></span>Akaun & langganan</a>
+</nav><div class="sidebar-footer"><div class="avatar" id="avatar">T</div><div><b id="account-name">THYSMY visitor</b><small id="account-plan">Free workspace</small></div><a href="#account" aria-label="Buka akaun" data-icon="chevron"></a></div></aside>
+<button class="nav-scrim" id="nav-scrim" aria-label="Tutup menu" hidden></button>
+<div class="workspace"><header class="topbar"><div class="breadcrumb"><button class="icon-button mobile-menu" id="menu-toggle" aria-label="Buka navigasi" aria-expanded="false" data-icon="menu"></button><span>Workspace</span><span class="crumb-slash">/</span><b id="page-label">Overview</b></div><div class="top-actions"><span class="time-zone"><span data-icon="clock"></span>MYT <time id="local-time">—</time></span><button class="icon-button" id="theme-toggle" aria-label="Tukar tema" data-icon="sun"></button><a class="icon-button" href="#alerts" aria-label="Peringatan" data-icon="bell"></a><a class="button gold small" href="/pricing" id="pro-button"><span data-icon="spark"></span>Get Pro</a></div></header>
+<main id="main" tabindex="-1"><div class="page-heading"><div><p class="eyebrow" id="eyebrow">YOUR EDGE STARTS WITH CONTEXT</p><h1 id="page-title">Market overview<span class="gold-dot">.</span></h1><p class="subtitle" id="page-subtitle">News, angka dan konteks. Semua di satu tempat.</p></div><div class="heading-actions"><span id="connection-status" class="status-chip">Menyambung data</span><button class="button outline small" id="refresh"><span data-icon="refresh"></span>Refresh</button></div></div>
+<div id="global-message" class="notice" role="status" hidden></div>
+<section class="market-strip" id="market-strip" aria-label="Pasaran"></section>
+<div id="page-content"></div>
+<footer class="workspace-foot"><span>THYSMY <span class="muted">News Intelligence</span></span><span>Analisis konteks, bukan jaminan arah harga. Waktu: Malaysia (UTC+8).</span><a href="/methodology">Metodologi & sumber</a></footer></main></div>
+<div id="toast" role="status" hidden></div><dialog id="modal"><div id="modal-content"></div><button class="dialog-close icon-button" id="modal-close" aria-label="Tutup" data-icon="close"></button></dialog></body></html>
