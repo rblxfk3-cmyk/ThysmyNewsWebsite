@@ -1,0 +1,31 @@
+THYSMY V4 — KEMAS KINI GEMINI
+
+1. Extract ZIP ini. Upload fail dan folder ke root repository GitHub website.
+   Gantikan fail bernama sama, kekalkan struktur static/ dan templates/.
+   Pastikan gemini_ai.py dan workspace_api.py berada di sebelah app.py.
+   Jangan upload ZIP sahaja. Jangan upload API key atau fail .env.
+2. Render > service THYSMY > Environment:
+   GEMINI_API_KEY = key sendiri dari Google AI Studio
+   GEMINI_MODEL = gemini-2.5-flash-lite
+3. Kekalkan projek Google pada Free tier jika mahu tanpa caj API.
+   Kod tidak boleh mengawal billing projek Google. Kuota percuma terhad.
+4. Save and deploy. Pastikan Render deploy commit GitHub yang terbaru.
+5. Selepas status Live, refresh website. Login Pro > Tanya THYSMY.
+   Hantar: Helo, apa yang kau boleh bantu?
+   Dikonfigurasi = key dikesan, belum diuji.
+   Sambungan berjaya / Gemini AI = respons Gemini telah diterima.
+   Ralat konfigurasi = semak key/model/akses projek.
+   Had penggunaan = kuota atau rate limit dicapai; panduan aturan digunakan.
+
+Supabase dan ENV V3 sedia ada dikekalkan.
+Jika migrasi V4 sudah berjaya, TIADA SQL tambahan untuk Gemini.
+Jika belum migrasi V4, jalankan SUPABASE_V4_MIGRATION.sql pada projek V3 dahulu.
+Kemas kini ini untuk pembantu Gemini, bukan enjin signal atau bot Telegram.
+
+Privasi: soalan dan snapshot pasaran dihantar ke Google; jangan taip maklumat
+sulit. Akaun, jurnal dan pembayaran tidak dihantar secara automatik.
+Free tier Google boleh menggunakan kandungan untuk penambahbaikan produk.
+AI boleh tersilap; tidak belajar sendiri sejarah trade atau menjamin win rate.
+
+Pengesahan: 32 ujian automatik lulus dengan respons API simulasi.
+Key sebenar, deployment Render dan kuota projek pengguna belum diuji.
