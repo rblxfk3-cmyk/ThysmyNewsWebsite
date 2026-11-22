@@ -1,0 +1,249 @@
+/*
+  THYSMY Pro Max visual refinement
+  Compatibility patch for the existing static/workspace.css.
+  IMPORTANT: append this file's contents to the END of the existing stylesheet.
+  Do not replace the original file. Layout, responsive rules, selectors and
+  application behavior remain defined by the original stylesheet.
+*/
+
+/* Institutional black and gold palette */
+:root {
+  --bg: #090b0e;
+  --sidebar: #0d1014;
+  --panel: #12161c;
+  --panel-2: #191f27;
+  --line: #2b333e;
+  --text: #f3f1eb;
+  --muted: #a3abb5;
+  --dim: #788391;
+  --gold: #d8b36a;
+  --gold-bg: rgba(216, 179, 106, .12);
+  --green: #62c9a3;
+  --red: #ef8188;
+  --input: #10151b;
+  --shadow: 0 16px 42px rgba(0, 0, 0, .28);
+}
+
+[data-theme=light] {
+  --bg: #f2f3f5;
+  --sidebar: #171b21;
+  --panel: #fff;
+  --panel-2: #f4f5f7;
+  --line: #dce1e7;
+  --text: #1a2028;
+  --muted: #5e6977;
+  --dim: #7b8794;
+  --gold: #9b702d;
+  --gold-bg: #f4ead8;
+  --green: #16765a;
+  --red: #b83f4b;
+  --input: #fafbfc;
+  --shadow: 0 12px 30px rgba(30, 42, 56, .08);
+}
+
+/* Overall surfaces */
+body,
+.workspace {
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+.sidebar {
+  background: linear-gradient(180deg, #10141a 0%, var(--sidebar) 100%);
+  border-right-color: rgba(216, 179, 106, .17);
+}
+
+.topbar {
+  background: rgba(9, 11, 14, .92);
+  border-bottom-color: rgba(216, 179, 106, .16);
+  backdrop-filter: blur(16px);
+}
+
+.panel {
+  background-image: linear-gradient(145deg, rgba(255,255,255,.025), transparent 48%);
+  border-color: var(--line);
+  box-shadow: var(--shadow);
+}
+
+.market-strip {
+  background: var(--panel);
+  border-color: var(--line);
+  box-shadow: 0 8px 24px rgba(0,0,0,.16);
+}
+
+.market-tile + .market-tile {
+  border-left-color: var(--line);
+}
+
+/* Brand and navigation */
+.brand,
+.brand-icon,
+.gold-text,
+.gold-dot {
+  color: var(--gold);
+}
+
+.brand-icon {
+  border-bottom-color: var(--gold);
+}
+
+nav a.active {
+  color: #f0cf8a;
+  background: linear-gradient(90deg, rgba(216,179,106,.16), rgba(216,179,106,.055));
+}
+
+nav a.active:before {
+  background: var(--gold);
+  box-shadow: 0 0 12px rgba(216,179,106,.35);
+}
+
+nav a:hover {
+  background: rgba(216,179,106,.07);
+}
+
+/* Gold action buttons */
+.button.gold {
+  color: #21190d;
+  border-color: #e5c27e;
+  background: linear-gradient(145deg, #f0d493 0%, #d8b36a 58%, #c99b50 100%);
+  box-shadow: 0 4px 12px rgba(201,155,78,.17), inset 0 1px 0 rgba(255,255,255,.35);
+  font-weight: 750;
+}
+
+.button.gold:hover {
+  filter: brightness(1.06);
+  box-shadow: 0 7px 18px rgba(201,155,78,.23), inset 0 1px 0 rgba(255,255,255,.4);
+  transform: translateY(-1px);
+}
+
+.button.outline {
+  border-color: var(--line);
+  background: rgba(255,255,255,.015);
+}
+
+.button.outline:hover,
+.icon-button:hover {
+  border-color: rgba(216,179,106,.48);
+  color: var(--gold);
+}
+
+/* Typography and data emphasis */
+h1, h2, h3,
+.page-heading h1,
+.panel-heading h2 {
+  color: var(--text);
+}
+
+.eyebrow,
+.nav-caption,
+.countdown-label {
+  color: var(--gold);
+}
+
+.market-value strong,
+.chart-quote strong,
+.result-big,
+.subscription-price {
+  color: var(--gold);
+}
+
+.status-chip.live {
+  color: var(--green);
+}
+
+/* Inputs and controls */
+input,
+select,
+textarea {
+  background-color: var(--input);
+  border-color: var(--line);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(216,179,106,.13);
+}
+
+input[type=checkbox] {
+  accent-color: var(--gold);
+}
+
+/* Tables and dividers */
+th {
+  color: var(--gold);
+  background: var(--panel-2);
+}
+
+th, td,
+.component-row,
+.agenda-row,
+.news-row,
+.workspace-foot {
+  border-color: var(--line);
+}
+
+/* Signal, event and pricing cards */
+.event-focus {
+  background:
+    radial-gradient(ellipse at 100% 0%, rgba(216,179,106,.12), transparent 68%),
+    var(--panel);
+}
+
+.event-orb {
+  color: var(--gold);
+  background: var(--gold-bg);
+  border-color: rgba(216,179,106,.3);
+}
+
+.signal-card,
+.overview-bottom > .panel,
+.metric-row > .panel {
+  transition: border-color .2s ease, box-shadow .2s ease, transform .2s ease;
+}
+
+.subscription-card {
+  border-color: rgba(216,179,106,.42);
+}
+
+/* Authentication and standalone surfaces */
+.auth-story {
+  background:
+    radial-gradient(ellipse at 20% 80%, rgba(216,179,106,.12), transparent 70%),
+    var(--sidebar);
+  border-right-color: rgba(216,179,106,.17);
+}
+
+.auth-box a,
+.auth-box .auth-bottom a,
+.inline-link {
+  color: var(--gold);
+}
+
+/* Dialog and toast */
+dialog {
+  border-color: rgba(216,179,106,.28);
+  box-shadow: 0 24px 80px rgba(0,0,0,.48);
+}
+
+#toast {
+  border: 1px solid var(--line);
+}
+
+/* Keep the theme usable on smaller screens and with reduced motion. */
+@media (max-width: 720px) {
+  .market-strip {
+    box-shadow: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .signal-card,
+  .overview-bottom > .panel,
+  .metric-row > .panel,
+  .button {
+    transition: none !important;
+    transform: none !important;
+  }
+}
